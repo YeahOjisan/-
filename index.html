@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
 
 <style>
 html,
@@ -13,32 +14,41 @@ body {
 }
 
 body {
-    color: #000000;
     font-family: sans-serif;
+    color: #000000;
+    text-align: left;
 }
 
 #text {
     margin: 0;
-    padding: 0;
+    padding: 16px;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     word-break: break-word;
-    text-align: left;
-    font-family: inherit;
+    font-family: sans-serif;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.6;
+    font-weight: normal;
+    text-align: left;
 }
 
 #text a {
     color: inherit;
     text-decoration: none;
 }
+
+@media (max-width: 600px) {
+    #text {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<pre id="text">サムネイラスト：
+<div id="text">サムネイラスト：
 ありがとうございます💧✨
 
 ꕤ･･· • •⋈· · • • • ୨୧ • • • · ·⋈• • · ·･･ꕤ
@@ -70,7 +80,6 @@ X(旧Twitter) →   https://x.com/kokage_tsumugi
 💧。⋈ ファンアート → #つむぎふと
 💧。⋈ ファンネーム → こもれびと
 💧。⋈ 推しマーク →  📘💧
-
 
 藤ちょこママ →   https://x.com/fuzichoco  
 白沢飾音パパ →  https://x.com/ShirasawaKazane
@@ -129,60 +138,68 @@ https://bit.ly/3XCTrra
 さあ、GALLERIAと、その先の世界へ。
  
 GALLERIA ブランドサイト
-https://bit.ly/4cUwRyM</pre>
+https://bit.ly/4cUwRyM</div>
 
 <script>
 const text = document.getElementById("text");
 
 const urlPattern = /https?:\/\/[^\s]+/g;
 
-const walker = document.createTreeWalker(
-    text,
-    NodeFilter.SHOW_TEXT
-);
-
-const nodes = [];
-
-while (walker.nextNode()) {
-    nodes.push(walker.currentNode);
-}
-
-nodes.forEach(node => {
-    const value = node.nodeValue;
-    urlPattern.lastIndex = 0;
-
-    if (!urlPattern.test(value)) {
-        return;
-    }
-
-    urlPattern.lastIndex = 0;
-
-    const fragment = document.createDocumentFragment();
-    let last = 0;
-    let match;
-
-    while ((match = urlPattern.exec(value)) !== null) {
-        fragment.appendChild(
-            document.createTextNode(value.slice(last, match.index))
-        );
-
-        const link = document.createElement("a");
-        link.href = match[0];
-        link.textContent = match[0];
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-
-        fragment.appendChild(link);
-
-        last = match.index + match[0].length;
-    }
-
-    fragment.appendChild(
-        document.createTextNode(value.slice(last))
+function linkify(element) {
+    const walker = document.createTreeWalker(
+        element,
+        NodeFilter.SHOW_TEXT
     );
 
-    node.parentNode.replaceChild(fragment, node);
-});
+    const nodes = [];
+    let node;
+
+    while (node = walker.nextNode()) {
+        nodes.push(node);
+    }
+
+    nodes.forEach(function(textNode) {
+        const value = textNode.nodeValue;
+        urlPattern.lastIndex = 0;
+
+        if (!urlPattern.test(value)) {
+            urlPattern.lastIndex = 0;
+            return;
+        }
+
+        urlPattern.lastIndex = 0;
+
+        const fragment = document.createDocumentFragment();
+        let last = 0;
+        let match;
+
+        while (match = urlPattern.exec(value)) {
+            fragment.appendChild(
+                document.createTextNode(
+                    value.substring(last, match.index)
+                )
+            );
+
+            const link = document.createElement("a");
+            link.href = match[0];
+            link.textContent = match[0];
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+
+            fragment.appendChild(link);
+
+            last = match.index + match[0].length;
+        }
+
+        fragment.appendChild(
+            document.createTextNode(value.substring(last))
+        );
+
+        textNode.parentNode.replaceChild(fragment, textNode);
+    });
+}
+
+linkify(text);
 </script>
 
 </body>
