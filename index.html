@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>紡木こかげ</title>
-
 <style>
 html,
 body {
@@ -15,20 +13,8 @@ body {
 }
 
 body {
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Hiragino Kaku Gothic ProN",
-        "Yu Gothic",
-        Meiryo,
-        sans-serif;
-}
-
-.page {
-    width: 100%;
-    max-width: 900px;
-    margin: 0;
-    padding: 24px;
+    color: #000000;
+    font-family: sans-serif;
 }
 
 #text {
@@ -37,37 +23,20 @@ body {
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     word-break: break-word;
-
+    text-align: left;
     font-family: inherit;
     font-size: 16px;
-    line-height: 1.8;
-
-    text-align: left;
+    line-height: 1.5;
 }
 
 #text a {
-    color: #2878c8;
-    text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-    .page {
-        width: auto;
-        padding: 16px;
-    }
-
-    #text {
-        font-size: 15px;
-        line-height: 1.8;
-        text-align: left;
-    }
+    color: inherit;
+    text-decoration: none;
 }
 </style>
 </head>
 
 <body>
-
-<div class="page">
 
 <pre id="text">サムネイラスト：
 ありがとうございます💧✨
@@ -101,6 +70,7 @@ X(旧Twitter) →   https://x.com/kokage_tsumugi
 💧。⋈ ファンアート → #つむぎふと
 💧。⋈ ファンネーム → こもれびと
 💧。⋈ 推しマーク →  📘💧
+
 
 藤ちょこママ →   https://x.com/fuzichoco  
 白沢飾音パパ →  https://x.com/ShirasawaKazane
@@ -161,69 +131,58 @@ https://bit.ly/3XCTrra
 GALLERIA ブランドサイト
 https://bit.ly/4cUwRyM</pre>
 
-</div>
-
 <script>
 const text = document.getElementById("text");
 
-const urlPattern = /(https?:\/\/[^\s]+)/g;
+const urlPattern = /https?:\/\/[^\s]+/g;
 
-function linkify(node) {
-    const walker = document.createTreeWalker(
-        node,
-        NodeFilter.SHOW_TEXT
-    );
+const walker = document.createTreeWalker(
+    text,
+    NodeFilter.SHOW_TEXT
+);
 
-    const nodes = [];
-    let current;
+const nodes = [];
 
-    while (current = walker.nextNode()) {
-        nodes.push(current);
-    }
-
-    nodes.forEach(function(textNode) {
-        const value = textNode.nodeValue;
-
-        urlPattern.lastIndex = 0;
-
-        if (!urlPattern.test(value)) {
-            urlPattern.lastIndex = 0;
-            return;
-        }
-
-        urlPattern.lastIndex = 0;
-
-        const fragment = document.createDocumentFragment();
-        let lastIndex = 0;
-        let match;
-
-        while (match = urlPattern.exec(value)) {
-            fragment.appendChild(
-                document.createTextNode(
-                    value.slice(lastIndex, match.index)
-                )
-            );
-
-            const a = document.createElement("a");
-            a.href = match[0];
-            a.textContent = match[0];
-            a.target = "_blank";
-            a.rel = "noopener noreferrer";
-
-            fragment.appendChild(a);
-
-            lastIndex = match.index + match[0].length;
-        }
-
-        fragment.appendChild(
-            document.createTextNode(value.slice(lastIndex))
-        );
-
-        textNode.parentNode.replaceChild(fragment, textNode);
-    });
+while (walker.nextNode()) {
+    nodes.push(walker.currentNode);
 }
 
-linkify(text);
+nodes.forEach(node => {
+    const value = node.nodeValue;
+    urlPattern.lastIndex = 0;
+
+    if (!urlPattern.test(value)) {
+        return;
+    }
+
+    urlPattern.lastIndex = 0;
+
+    const fragment = document.createDocumentFragment();
+    let last = 0;
+    let match;
+
+    while ((match = urlPattern.exec(value)) !== null) {
+        fragment.appendChild(
+            document.createTextNode(value.slice(last, match.index))
+        );
+
+        const link = document.createElement("a");
+        link.href = match[0];
+        link.textContent = match[0];
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+
+        fragment.appendChild(link);
+
+        last = match.index + match[0].length;
+    }
+
+    fragment.appendChild(
+        document.createTextNode(value.slice(last))
+    );
+
+    node.parentNode.replaceChild(fragment, node);
+});
 </script>
 
 </body>
