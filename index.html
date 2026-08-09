@@ -3,40 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>紡木こかげ</title>
 
 <style>
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
-    background: #f7f9ff;
+    background: #ffffff;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        Meiryo,
+        sans-serif;
 }
 
 .page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 24px 16px 48px;
-}
-
-.content {
-    background: #ffffff;
-    border-radius: 18px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0;
     padding: 24px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 #text {
     margin: 0;
+    padding: 0;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
     word-break: break-word;
+
     font-family: inherit;
     font-size: 16px;
     line-height: 1.8;
+
+    text-align: left;
 }
 
 #text a {
@@ -46,17 +52,14 @@ body {
 
 @media (max-width: 600px) {
     .page {
-        padding: 12px 8px 32px;
-    }
-
-    .content {
-        padding: 18px 14px;
-        border-radius: 14px;
+        width: auto;
+        padding: 16px;
     }
 
     #text {
         font-size: 15px;
         line-height: 1.8;
+        text-align: left;
     }
 }
 </style>
@@ -65,7 +68,7 @@ body {
 <body>
 
 <div class="page">
-<div class="content">
+
 <pre id="text">サムネイラスト：
 ありがとうございます💧✨
 
@@ -157,7 +160,7 @@ https://bit.ly/3XCTrra
  
 GALLERIA ブランドサイト
 https://bit.ly/4cUwRyM</pre>
-</div>
+
 </div>
 
 <script>
@@ -179,9 +182,11 @@ function linkify(node) {
     }
 
     nodes.forEach(function(textNode) {
-        const text = textNode.nodeValue;
+        const value = textNode.nodeValue;
 
-        if (!urlPattern.test(text)) {
+        urlPattern.lastIndex = 0;
+
+        if (!urlPattern.test(value)) {
             urlPattern.lastIndex = 0;
             return;
         }
@@ -192,9 +197,11 @@ function linkify(node) {
         let lastIndex = 0;
         let match;
 
-        while (match = urlPattern.exec(text)) {
+        while (match = urlPattern.exec(value)) {
             fragment.appendChild(
-                document.createTextNode(text.slice(lastIndex, match.index))
+                document.createTextNode(
+                    value.slice(lastIndex, match.index)
+                )
             );
 
             const a = document.createElement("a");
@@ -209,7 +216,7 @@ function linkify(node) {
         }
 
         fragment.appendChild(
-            document.createTextNode(text.slice(lastIndex))
+            document.createTextNode(value.slice(lastIndex))
         );
 
         textNode.parentNode.replaceChild(fragment, textNode);
