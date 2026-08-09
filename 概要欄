@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>紡木こかげ - Profile & Links</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f7f9fc;
+      color: #333;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+      line-height: 1.9;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .thanks {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .divider {
+      text-align: center;
+      color: #5195E1;
+      margin: 24px 0;
+      overflow-wrap: anywhere;
+    }
+
+    h2 {
+      font-size: 20px;
+      border-left: 5px solid #5195E1;
+      padding-left: 12px;
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    a {
+      color: #2878c8;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .link-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .link-list li {
+      margin: 10px 0;
+    }
+
+    .blue {
+      color: #5195E1;
+      font-weight: bold;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile .name {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .profile .sub {
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .tags {
+      line-height: 2.1;
+    }
+
+    .equipment {
+      background: #f5f8fc;
+      border-radius: 14px;
+      padding: 16px;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      font-family: monospace;
+      line-height: 1.7;
+    }
+
+    .rule {
+      padding-left: 1em;
+      text-indent: -1em;
+      margin: 8px 0;
+    }
+
+    .footer {
+      text-align: center;
+      color: #888;
+      font-size: 13px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 18px 12px 40px;
+      }
+
+      .card {
+        padding: 20px 17px;
+        border-radius: 16px;
+      }
+
+      .title {
+        font-size: 21px;
+      }
+
+      .divider {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card">
+    <div class="title">紡木こかげ Profile & Links</div>
+
+    <div class="thanks">
+      サムネイラスト：<br>
+      ありがとうございます💧✨
+    </div>
+
+    <div class="divider">
+      ꕤ･･· • •⋈· · • • • ୨୧ • • • · ·⋈• • · ·･･ꕤ
+    </div>
+
+    <ul class="link-list">
+      <li>💧。⋈【電話ボイス2024】<br>
+        <a href="https://store.vspo.jp/products/phone2024-voice?_pos=6&_fid=a0aa89ad6&_ss=c&variant=46197435498683" target="_blank">
+          https://store.vspo.jp/products/phone2024-voice
+        </a>
+      </li>
+
+      <li>💧。⋈【看病ボイス2024】<br>
+        <a href="https://store.vspo.jp/products/nurse2024-voice?_pos=5&_fid=a0aa89ad6&_ss=c&variant=46315448205499" target="_blank">
+          https://store.vspo.jp/products/nurse2024-voice
+        </a>
+      </li>
+
+      <li>💧。⋈【クリスマスボイス2024】<br>
+        <a href="https://store.vspo.jp/products/christmas2024-voice?variant=46394022854843" target="_blank">
+          https://store.vspo.jp/products/christmas2024-voice
+        </a>
+      </li>
+
+      <li>💧。⋈【学園ボイス2025】<br>
+        <a href="https://store.vspo.jp/products/school2025-voice?_pos=6&_fid=4523c88c2&_ss=c" target="_blank">
+          https://store.vspo.jp/products/school2025-voice
+        </a>
+      </li>
+
+      <li>💧。⋈【異世界ボイス2025】<br>
+        <a href="https://store.vspo.jp/products/isekai2025-voice?_pos=5&_fid=4523c88c2&_ss=c" target="_blank">
+          https://store.vspo.jp/products/isekai2025-voice
+        </a>
+      </li>
+
+      <li>💧。⋈【パラレルボイス2025】<br>
+        <a href="https://store.vspo.jp/products/parallelvoice2025?_pos=3&_fid=4523c88c2&_ss=c" target="_blank">
+          https://store.vspo.jp/products/parallelvoice2025
+        </a>
+      </li>
+
+      <li>💧。⋈【バレンタインボイス2025】<br>
+        <a href="https://store.vspo.jp/products/valentinevoice2026?_pos=2&_fid=4523c88c2&_ss=c" target="_blank">
+          https://store.vspo.jp/products/valentinevoice2026
+        </a>
+      </li>
+
+      <li>💧。⋈【隣人ボイス2025】<br>
+        <a href="https://store.vspo.jp/products/rinjinvoice2026?_pos=1&_fid=4523c88c2&_ss=c&variant=47859601735867" target="_blank">
+          https://store.vspo.jp/products/rinjinvoice2026
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="card profile">
+
+    <div class="divider">
+      ꕤ･･· • •⋈· · • • • ୨୧ • • • · ·⋈• • · ·･･ꕤ
+    </div>
+
+    <div class="name">紡木こかげ</div>
+
+    <p>
+      ぶいすぽっ！所属のVTuber<br>
+      Tsumugi Kokageです！
+    </p>
+
+    <p>
+      FPSと食べることが大好き
+    </p>
+
+    <p>
+      X(旧Twitter) →
+      <a href="https://x.com/kokage_tsumugi" target="_blank">
+        @kokage_tsumugi
+      </a>
+    </p>
+
+    <p>
+      誕生日 → 10月26日<br>
+      身長 → 152cm<br>
+      カラーコード → 5195E1
+    </p>
+
+    <div class="tags">
+      💧。⋈ 総合タグ → #紡木こかげ<br>
+      💧。⋈ 配信タグ → #こかげで一休み<br>
+      💧。⋈ ファンアート → #つむぎふと<br>
+      💧。⋈ ファンネーム → こもれびと<br>
+      💧。⋈ 推しマーク → 📘💧
+    </div>
+
+    <p>
+      藤ちょこママ →
+      <a href="https://x.com/fuzichoco" target="_blank">
+        @fuzichoco
+      </a>
+      <br>
+
+      白沢飾音パパ →
+      <a href="https://x.com/ShirasawaKazane" target="_blank">
+        @ShirasawaKazane
+      </a>
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="divider">
+      ꕤ･･· • •⋈· · • • • ୨୧ • • • · ·⋈• • · ·･･ꕤ
+    </div>
+
+    <h2>💧。⋈ メンバーシップ</h2>
+
+    <p>
+      <a href="https://www.youtube.com/channel/UC-WX1CXssCtCtc2TNIRnJzg/join" target="_blank">
+        メンバーシップはこちら
+      </a>
+    </p>
+
+    <h3>【メンバー特典】</h3>
+
+    <p>
+      1. 名前の横にメンバーバッジが付きます<br>
+      2. メンバー限定スタンプが使えます<br>
+      3. こかげんぬが喜びます
+    </p>
+
+    <p>
+      メンバー限定配信や壁紙配布などは<br>
+      いつかあるかもしれないし、ないかもしれません。
+    </p>
+
+    <h2>💧。⋈ 配信ルール</h2>
+
+    <p class="rule">・スパチャ、メンバーシップ登録は反応出来ない場合があります<br>
+    （基本的には配信の最後に読ませていただいてます！いつもありがとう！)</p>
+
+    <p class="rule">・暖かいコメント欄を心がける、みんな仲良くする</p>
+
+    <p class="rule">・伝書鳩行為だめ</p>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="divider">
+      ꕤ･･· • •⋈· · • • • ୨୧ • • • · ·⋈• • · ·･･ꕤ
+    </div>
+
+    <h2>VALORANT</h2>
+
+    <p>
+      Sens: 800 / 0.2
+    </p>
+
+    <h3>Crosshair</h3>
+
+    <div class="equipment">0;P;c;8;u;00AEEFFF;o;0;b;1;0l;4;0v;0;0a;1;0f;0;1b;0
+0;s;1;P;c;8;u;0067C0FF;h;0;b;1;0l;4;0v;3;0o;0;0a;1;0f;0;1b;0</div>
+
+    <h3>Equipment</h3>
+
+    <div class="equipment">Mouse: GPRO X SUPERLIGHT 2
+Mousepad: QCK HEAVY
+Keyboard: Wooting 60HE+</div>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="divider">
+      ꕤ･･· • •⋈· · • • • ୨୧ • • • · ·⋈• • · ·･･ꕤ
+    </div>
+
+    <h2>ぶいすぽっ！について</h2>
+
+    <ul class="link-list">
+      <li>💧。⋈公式サイト →
+        <a href="https://vspo.jp/" target="_blank">vspo.jp</a>
+      </li>
+
+      <li>💧。⋈公式X(旧Twitter) →
+        <a href="https://x.com/Vspo77" target="_blank">@Vspo77</a>
+      </li>
+
+      <li>💧。⋈公式Youtubeチャンネル →
+        <a href="https://www.youtube.com/@Vspo77" target="_blank">@Vspo77</a>
+      </li>
+
+      <li>💧。⋈公式グッズ →
+        <a href="https://store.vspo.jp/" target="_blank">公式グッズ</a>
+      </li>
+
+      <li>💧。⋈二次創作ガイドライン →
+        <a href="https://vspo.jp/guide" target="_blank">ガイドライン</a>
+      </li>
+
+      <li>注意事項 →
+        <a href="https://vspo.jp/faq" target="_blank">FAQ</a>
+      </li>
+    </ul>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="divider">
+      ꕤ･･· • •⋈· · • • • ୨୧ • • • · ·⋈• • · ·･･ꕤ
+    </div>
+
+    <h2>▼ぶいすぽっ！ × GALLERIAコラボPC販売中</h2>
+
+    <p>
+      <a href="https://bit.ly/3XCTrra" target="_blank">
+        https://bit.ly/3XCTrra
+      </a>
+    </p>
+
+    <h3>▼ゲーミングPC『GALLERIA』</h3>
+
+    <p>
+      比類なきパフォーマンス、最高のフレキシビリティ。<br>
+      一人ひとりの想いが詰まった夢をかなえる、<br>
+      ただひとつのゲーミングPC GALLERIA(ガレリア)。<br>
+      さあ、GALLERIAと、その先の世界へ。
+    </p>
+
+    <p>
+      GALLERIA ブランドサイト<br>
+      <a href="https://bit.ly/4cUwRyM" target="_blank">
+        https://bit.ly/4cUwRyM
+      </a>
+    </p>
+
+  </div>
+
+
+  <div class="footer">
+    💧 紡木こかげ
+  </div>
+
+</div>
+
+</body>
+</html>
